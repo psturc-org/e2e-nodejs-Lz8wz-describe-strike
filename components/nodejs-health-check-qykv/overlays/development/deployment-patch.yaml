@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: nodejs-health-check-qykv
+  namespace: e2e-demos-pvfv-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/psturc/test-images-protected@sha256:7fb7006d225a924b000c892e8bd3b3294088b35a87c2d37009fbd24e3d2508d6
+        name: my-nodejs
+        resources: {}
+status: {}
